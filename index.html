@@ -36,14 +36,14 @@
     <main>
       <section class="bg-[#F8F8F8] lg:flex lg:flex-row-reverse justify-around">
 
-        <div class="right-area py-3 lg:sticky lg:top-0 ">
+        <div class="right-area mt-10 py-3 lg:sticky lg:top-0 ">
         
           <div class="cupon-area bg-white my-5 pb-5">
-            <h1 class="font-semibold text-xl p-5">Have coupon?</h1>
+            <h1 class="lg:text-lg font-semibold text-xl p-5">Have coupon?</h1>
             <div class="form-control">
               
-              <label class="input-group pl-5">
-                <input type="text" placeholder="Coupon code" class="input input-bordered" />
+              <label class="input-group px-5 ">
+                <input type="text" placeholder="Coupon code" class=" lg:w-32 input input-bordered" />
                 <span class="text-white font-medium bg-[#E527B2]">Apply</span>
               </label>
             </div>
@@ -55,7 +55,7 @@
             <span class="text-lg font-semibold">Total:</span> 205.60 TK <br>
          
 
-          <button class="py-2 bg-[#E527B2] text-white text-center font-semibold w-72 ml-1 rounded-md">Make Purchase </button>
+          <button class="py-2 bg-[#E527B2] text-white text-center font-semibold w-72 lg:w-52 ml-1 rounded-md">Make Purchase </button>
         </div>
         </div>
         </div>
@@ -63,11 +63,13 @@
         <div class="left-area">
           <div class="kitchenware lg:text-left text-center">
             <h1 class="font-bold text-2xl p-5">Kitchenware</h1>
-            <div class="items lg:flex lg:flex-row lg:justify-around flex flex-col gap-5">
+            <div class="items grid grid-cols-1 lg:grid-cols-3 gap-2">
               <div class="item1">
                 <div class="card  bg-base-100 shadow-xl">
-                  <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
-                    <img src="images/prod1.png" alt="" class="rounded-xl" />
+                  <figure class=" px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
+                    <div class="lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="images/prod1.png" alt="" class=" rounded-xl" />
+                  </div>
                   </figure>
                   <div class="card-body items-center text-center">
                     <div class="rating">
@@ -84,14 +86,15 @@
                   </div>
                 </div>
               </div>
-              <div class="item2"></div>
-              <div class="item3"></div>
+          
             </div>
 
-            <div class="item2">
-              <div class="card  bg-base-100 shadow-xl">
+            <div class="item2 ">
+              <div class="card lg:h-[355px] bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
-                  <img src="images/prod2.png" alt="" class="rounded-xl" />
+                  <div class="lg:aspect-w-1 lg:aspect-h-1">
+                    <img src="images/prod2.png" alt="" class=" rounded-xl" />
+                  </div>
                 </figure>
                 <div class="card-body items-center text-center">
                   <div class="rating">
@@ -115,7 +118,9 @@
           <div class="item3">
             <div class="card  bg-base-100 shadow-xl">
               <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
-                <img src="images/prod3.png" alt="" class="rounded-xl" />
+                <div class="lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="images/prod3.png" alt="" class=" rounded-xl" />
+                </div>
               </figure>
               <div class="card-body items-center text-center">
                 <div class="rating">
@@ -141,9 +146,9 @@
 
         <div class="kitchenware lg:text-left text-center">
           <h1 class="font-bold text-2xl p-5">Sportswear</h1>
-          <div class="items lg:flex lg:flex-row flex flex-col gap-5">
+          <div class="items grid grid-cols-1 lg:grid-cols-3 gap-2">
             <div class="item1">
-              <div class="card  bg-base-100 shadow-xl">
+              <div class="card h-[355px] bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
                   <img src="images/prod4.png" alt="" class="rounded-xl" />
                 </figure>
@@ -166,7 +171,7 @@
           </div>
 
           <div class="item2">
-            <div class="card  bg-base-100 shadow-xl">
+            <div class="card h-[355px] bg-base-100 shadow-xl">
               <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
                 <img src="images/prod5.png" alt="" class="rounded-xl" />
               </figure>
@@ -190,7 +195,7 @@
         </div>
 
         <div class="item3">
-          <div class="card  bg-base-100 shadow-xl">
+          <div class="card h-[355px] bg-base-100 shadow-xl">
             <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
               <img src="images/prod6.png" alt="" class="rounded-xl" />
             </figure>
