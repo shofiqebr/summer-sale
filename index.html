@@ -13,9 +13,9 @@
   <body>
     <header>
 <section>
-    <div class="banner bg-[#F9F6E2] lg:flex lg:h-screen lg:flex-row-reverse justify-around">
-        <div class="banner-img">
-            <img class="lg:w-[450px] lg:flex lg:items-center lg:justify-center" src="images/Summer 1.png" alt="">
+    <div class="banner  pb-5 bg-[#F9F6E2] lg:flex lg:h-screen lg:flex-row-reverse justify-around">
+        <div class="banner-img md:flex md:items-center md:justify-center  lg:flex lg:items-center lg:justify-center">
+            <img class="md:w-[450px] lg:w-[450px] " src="images/Summer 1.png" alt="">
         </div>
 
         <div class="banner-description text-center mt-4 flex flex-col justify-center items-center">
@@ -34,23 +34,53 @@
     </header>
 
     <main>
-      <section>
+      <section class="bg-[#F8F8F8]">
+
+        <div class="right-area">
+          <div class="cupon-area">
+            <h1 class="font-semibold text-xl p-5">Have coupon?</h1>
+            <div class="form-control">
+              <!-- <label class="label">
+                <span class="label-text">Enter amount</span>
+              </label> -->
+              <label class="input-group">
+                <input type="text" placeholder="0.01" class="input input-bordered" />
+                <span>BTC</span>
+              </label>
+            </div>
+          </div>
+          <div class="total-area">
+            Total price: 257.00TK <br>
+            Discount : 51.40TK <br>
+            Total: 205.60 TK <br>
+          </div>
+
+          <button>Make Purchase </button>
+        </div>
+
         <div class="left-area">
-          <div class="kitchenware">
-            <h1>Kitchenware</h1>
+          <div class="kitchenware text-center">
+            <h1 class="font-bold text-2xl p-5">Kitchenware</h1>
             <div class="items">
               <div class="item1">
-                <!-- <div class="card w-96 bg-base-100 shadow-xl">
-                  <figure class="px-10 pt-10">
+                <div class="card  bg-base-100 shadow-xl">
+                  <figure class="px-10 pt-10 m-2 rounded-none bg-[#F3F3F3]">
                     <img src="images/prod1.png" alt="" class="rounded-xl" />
                   </figure>
                   <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2 class="card-title">K. Accessories</h2>
+                    <p>39.00 TK</p>
                     <div class="card-actions">
                      
                   </div>
-                </div> -->
+                </div>
               </div>
               <div class="item2"></div>
               <div class="item3"></div>
@@ -58,9 +88,7 @@
 
           </div>
         </div>
-        <div class="right-area">
-
-        </div>
+       
       </section>
 
 
