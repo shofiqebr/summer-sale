@@ -70,8 +70,11 @@ function resetRightArea() {
 
   
   document.getElementById("totalPrice").innerText = totalPrice;
-  document.getElementById("discount").innerText = `${discount}.00 TK`;
-  document.getElementById("total").innerText = `${totalPrice}.00 TK`;
+  document.getElementById("discount").innerText = `${discount}.00`;
+  document.getElementById("total").innerText = `${totalPrice}.00`;
+
+  const couponInput = document.querySelector('.cupon-area input');
+  couponInput.value = ''; 
 
   updateButtonStates(); 
 }
