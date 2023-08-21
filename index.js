@@ -41,16 +41,15 @@ function updateButtonStates() {
 }
 
 function applyCoupon() {
-  const couponCode = 'SELL200'; // Coupon code to check
+  const couponCode = 'SELL200'; 
   const couponInput = document.querySelector('.cupon-area input');
 
   if (couponInput.value === couponCode) {
-    discount = Math.floor(totalPrice * 0.2); // 20% discount
+    discount = Math.floor(totalPrice * 0.2); 
   } else {
     discount = 0;
   }
 
-  // Update the discount and total prices
   const discountElement = document.getElementById('discount');
   discountElement.innerText = `${discount}.00 TK`;
 
@@ -62,8 +61,6 @@ function applyCoupon() {
 
 
 
-// const totalPriceElement = document.getElementById('totalPrice');
-// const submitButton = document.getElementById('submitButton');
 
 
 
