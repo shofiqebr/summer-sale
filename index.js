@@ -1,94 +1,8 @@
-// function cardHandeler(data){
-//     const itemName = data.parentNode.childNodes[1].childNodes[3].childNodes[3].innerText;
-//     const ol = document.createElement("ol");
-//     ol.innerText = itemName;
-//     document.getElementById("selected-items").append(ol);
-    
-//     const selectedItemsList = document.getElementById("selected-items");
-//     const olList = Array.from(selectedItemsList.getElementsByTagName("ol"));
-//     const listNumber = olList.indexOf(ol) + 1;
-//     console.log(listNumber, ol);
-//     for (var i = 1; i <= 5; i++) {
-//         var li = document.createElement("li");
-//         li.textContent = "Item " + i;
-//         ol.appendChild(li);
-//     }
-//     div.appendChild(ol);
-// }
-// function cardHandeler(data) {
-//     const itemName = data.parentNode.childNodes[1].childNodes[3].childNodes[3].innerText;
-//     const ol = document.createElement("ol");
-//     const li = document.createElement("li");
-//     li.textContent = itemName;
-//     ol.appendChild(li);
-    
-//     const selectedItemsList = document.getElementById("selected-items");
-//     selectedItemsList.appendChild(ol);
-    
-//     const olList = Array.from(selectedItemsList.getElementsByTagName("ol"));
-//     const listNumber = olList.indexOf(ol) + 1;
-//     console.log(listNumber, ol);
-// }
-
-// function cardHandeler(data) {
-//     const itemName = data.parentNode.querySelector(".card-title").textContent;
-    
-//     const ol = document.createElement("ol");
-//     const li = document.createElement("li");
-//     li.textContent = `${itemName} (${olList.length + 1})`; // Include list number in item text
-//     ol.appendChild(li);
-
-//     const selectedItemsList = document.getElementById("selected-items");
-//     selectedItemsList.appendChild(ol);
-
-//     const olList = Array.from(selectedItemsList.getElementsByTagName("ol"));
-    
-//     console.log("List Number:", olList.length, "OL Element:", ol);
-// }
 
 
-
-// function cardHandeler(data) {
-//     const itemName = data.parentNode.querySelector(".card-title").textContent;
-    
-//     const ol = document.createElement("ol");
-//     const li = document.createElement("li");
-//     li.textContent = itemName;
-//     ol.appendChild(li);
-
-//     const selectedItemsList = document.getElementById("selected-items");
-//     selectedItemsList.appendChild(ol);
-
-//     const olList = Array.from(selectedItemsList.getElementsByTagName("ol"));
-    
-//     const listNumber = olList.length;
-
-//     const resultDiv = document.createElement("div");
-//     resultDiv.textContent = `List Number: ${listNumber}, Item Name: ${itemName}`;
-//     selectedItemsList.appendChild(resultDiv);
-// }
-
-
-// function cardHandeler(data) {
-//     const itemName = data.parentNode.querySelector(".card-title").textContent;
-    
-//     const selectedItemsList = document.getElementById("selected-items");
-//     const li = document.createElement("li");
-//     li.textContent = `${selectedItemsList.children.length + 1}. ${itemName}`;
-//     selectedItemsList.appendChild(li);
-// }
-
-// function cardHandeler(data) {
-//     const itemName = data.parentNode.querySelector(".card-title").textContent;
-
-//     const selectedItemsList = document.getElementById("selected-items");
-//     const li = document.createElement("li");
-//     li.textContent = `${selectedItemsList.children.length + 1} ${itemName}`;
-//     selectedItemsList.appendChild(li);
-// }
-
-
+let totalPrice = 0;
 let serialNumber = 1;
+let discount = 0;
 
 function cardHandeler(data) {
     const itemName = data.parentNode.querySelector(".card-title").textContent;
@@ -99,9 +13,57 @@ function cardHandeler(data) {
     selectedItemsList.appendChild(li);
     
     serialNumber++;
-    
+    const price = document.querySelector(".itemPrice").textContent.split(" ")[0];
+    totalPrice = parseInt(totalPrice) + parseInt(price);
+    document.getElementById("totalPrice").innerText=totalPrice;
+    updateButtonStates();
 }
 
+
+
+
+function updateButtonStates() {
+  const applyButton = document.querySelector('.cupon-area button');
+  applyButton.addEventListener('click', applyCoupon);
+  const makePurchaseButton = document.getElementById('submitButton');
+
+  if (totalPrice >= 200) {
+    applyButton.removeAttribute('disabled');
+  } else {
+    applyButton.setAttribute('disabled', 'disabled');
+  }
+
+  if (totalPrice > 0) {
+    makePurchaseButton.removeAttribute('disabled');
+  } else {
+    makePurchaseButton.setAttribute('disabled', 'disabled');
+  }
+}
+
+function applyCoupon() {
+  const couponCode = 'SELL200'; // Coupon code to check
+  const couponInput = document.querySelector('.cupon-area input');
+
+  if (couponInput.value === couponCode) {
+    discount = Math.floor(totalPrice * 0.2); // 20% discount
+  } else {
+    discount = 0;
+  }
+
+  // Update the discount and total prices
+  const discountElement = document.getElementById('discount');
+  discountElement.innerText = `${discount}.00 TK`;
+
+  const totalWithDiscount = totalPrice - discount;
+  const totalElement = document.getElementById('total');
+  totalElement.innerText = `${totalWithDiscount}.00 TK`;
+  updateButtonStates();
+}
+
+
+
+// const totalPriceElement = document.getElementById('totalPrice');
+// const submitButton = document.getElementById('submitButton');
 
 
 

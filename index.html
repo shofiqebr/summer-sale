@@ -44,7 +44,7 @@
               
               <label class="input-group px-5 ">
                 <input type="text" placeholder="Coupon code" class=" lg:w-32 input input-bordered" />
-                <span class="text-white font-medium bg-[#E527B2]">Apply</span>
+                <button class="text-white font-medium bg-[#E527B2] disabled:opacity-50" disabled>Apply</button>
               </label>
             </div>
           </div>
@@ -54,12 +54,12 @@
             </div>
             <hr>
           <div class="total-area sticky top-0 z-10 lg:sticky lg:top-0 pl-5 pb-5">
-            <span class="text-lg font-semibold">Total price:</span> 00TK <br>
-            <span class="text-lg font-semibold">Discount :</span> 00TK <br>
-            <span class="text-lg font-semibold">Total:</span> 00TK <br>
+            <span class="text-lg font-semibold">Total price:</span> <span id="totalPrice"> 00</span>TK <br>
+            <span class="text-lg font-semibold">Discount :</span><span id="discount"> 00</span>TK<br>
+            <span class="text-lg font-semibold">Total:</span><span id="total"> 00</span>TK <br>
          
 
-          <button class="py-2 bg-[#E527B2] text-white text-center font-semibold w-72 lg:w-52 ml-1 rounded-md">Make Purchase </button>
+          <button id="submitButton" class="py-2 bg-[#E527B2] text-white text-center font-semibold w-72 lg:w-52 ml-1 rounded-md disabled:opacity-50" disabled>Make Purchase </button>
         </div>
       </div>  
         </div>
@@ -84,7 +84,7 @@
                       <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                     </div>
                     <h2 class="card-title">K. Accessories 1</h2>
-                    <p>39.00 TK</p>
+                    <p class="itemPrice">39.00 TK</p>
                     <div class="card-actions">
                      
                   </div>
@@ -109,7 +109,7 @@
                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   </div>
                   <h2 class="card-title">K. Accessories 2</h2>
-                  <p>25.00 TK</p>
+                  <p class="itemPrice">25.00 TK</p>
                   <div class="card-actions">
                    
                 </div>
@@ -135,7 +135,7 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title">Home Cooker</h2>
-                <p>49.00 TK</p>
+                <p class="itemPrice">49.00 TK</p>
                 <div class="card-actions">
                  
               </div>
@@ -165,7 +165,7 @@
                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   </div>
                   <h2 class="card-title">Sports Back Cap</h2>
-                  <p>49.00 TK</p>
+                  <p class="itemPrice">49.00 TK</p>
                   <div class="card-actions">
                    
                 </div>
@@ -188,7 +188,7 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                 </div>
                 <h2 class="card-title">Full Jersey Set</h2>
-                <p>69.00 TK</p>
+                <p class="itemPrice">69.00 TK</p>
                 <div class="card-actions">
                  
               </div>
@@ -212,7 +212,7 @@
                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
               </div>
               <h2 class="card-title">Sports cates</h2>
-              <p>159.00 TK</p>
+              <p class="itemPrice">159.00 TK</p>
               <div class="card-actions">
                
             </div>
