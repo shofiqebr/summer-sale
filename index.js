@@ -13,8 +13,8 @@ function cardHandeler(data) {
     selectedItemsList.appendChild(li);
     
     serialNumber++;
-    const price = document.querySelector(".itemPrice").textContent.split(" ")[0];
-    totalPrice = parseInt(totalPrice) + parseInt(price);
+    const price = parseInt(data.parentNode.querySelector(".itemPrice").textContent); // Change this line
+    totalPrice += price; 
     document.getElementById("totalPrice").innerText=totalPrice;
     updateButtonStates();
 }
@@ -58,6 +58,25 @@ function applyCoupon() {
   totalElement.innerText = `${totalWithDiscount}.00 TK`;
   updateButtonStates();
 }
+
+
+function resetRightArea() {
+  const selectedItemsList = document.querySelector(".selected-list");
+  selectedItemsList.innerHTML = ""; 
+
+  totalPrice = 0;
+  serialNumber = 1; 
+  discount = 0;
+
+  
+  document.getElementById("totalPrice").innerText = totalPrice;
+  document.getElementById("discount").innerText = `${discount}.00 TK`;
+  document.getElementById("total").innerText = `${totalPrice}.00 TK`;
+
+  updateButtonStates(); 
+}
+
+document.querySelector('.modal-action button').addEventListener('click', resetRightArea);
 
 
 
