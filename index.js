@@ -82,6 +82,19 @@ function resetRightArea() {
 document.querySelector('.modal-action button').addEventListener('click', resetRightArea);
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const applyButton = document.querySelector('.cupon-area button');
+  const couponInput = document.querySelector('.cupon-area input');
+  const applyCouponCodeButton = document.getElementById('applyCouponCode');
+
+  applyButton.addEventListener('click', applyCoupon);
+  applyCouponCodeButton.addEventListener('click', function() {
+    couponInput.value = 'SELL200';
+  });
+
+  // Rest of your code...
+});
+
 
 
 
