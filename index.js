@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     couponInput.value = 'SELL200';
   });
 
-  // Rest of your code...
+  
 });
 
 
