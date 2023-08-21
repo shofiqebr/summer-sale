@@ -34,7 +34,7 @@
     </header>
 
     <main>
-      <section class="bg-[#F8F8F8] lg:flex lg:flex-row-reverse justify-around">
+      <section class="bg-[#F8F8F8] lg:flex lg:flex-row-reverse md:flex md:flex-row-reverse justify-around">
 
         <div class="right-area mt-10 py-3">
            
@@ -48,18 +48,19 @@
               </label>
             </div>
           </div>
-          <div class=" bg-white">
-            <div class="selected-items pl-5" id="selected-items">
+          <div class=" bg-white py-5">
+            <div class="selected-items pl-5 py-3" id="selected-items">
               <ul class="selected-list"></ul>
             </div>
             <hr>
-          <div class="total-area sticky top-0 z-10 lg:sticky lg:top-0 pl-5 pb-5">
-            <span class="text-lg font-semibold">Total price:</span> <span id="totalPrice"> 00</span>TK <br>
+          <div class="total-area pl-5 pb-5 my-5">
+            <span class="text-lg font-semibold ">Total price:</span> <span id="totalPrice"> 00</span>TK <br>
             <span class="text-lg font-semibold">Discount :</span><span id="discount"> 00</span>TK<br>
             <span class="text-lg font-semibold">Total:</span><span id="total"> 00</span> <br>
          
-
-            <button id="submitButton" class="py-2 bg-[#E527B2] text-white text-center font-semibold w-64 lg:w-44 ml-1 rounded-md disabled:opacity-50" data-toggle="modal" data-target="#my_modal_8" disabled><a class="bor" href="#my_modal_8">Make Purchase</a> </button>
+            <hr>
+            <button id="submitButton" class="py-2 my-5 bg-[#E527B2] text-white text-center font-semibold w-64 lg:w-44 ml-1 rounded-md disabled:opacity-50" data-toggle="modal" data-target="#my_modal_8" disabled><a class="bor" href="#my_modal_8">Make Purchase</a> </button>
+            
         </div>
       </div>  
         </div>
@@ -148,7 +149,7 @@
           </div>
         </div>
 
-        <div class="kitchenware lg:text-left text-center">
+        <div class="kitchenware lg:text-left text-center py-5">
           <h1 class="font-bold text-2xl p-5">Sportswear</h1>
           <div class="items grid grid-cols-1 lg:grid-cols-3 gap-2">
             <div class="item1">
@@ -237,7 +238,7 @@
     <footer></footer>
 
     <div class="modal" id="my_modal_8">
-      <div class="modal-box lg:flex lg:flex-col lg:justify-center lg:items-center ">
+      <div class="modal-box lg:flex lg:flex-col lg:justify-center lg:items-center flex flex-col justify-center items-center ">
         <img class="w-28" src="images/congo.png" alt="">
         <h1 class="font-bold text-3xl">Congratulations</h1>
         <p class="text-xs py-5">Your Purchase the product</p>
